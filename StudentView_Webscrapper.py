@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-start = time.time()
+startTime = time.time()
 
 classNum = 0
 classNames = []
@@ -25,8 +25,12 @@ chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
 
 #  Login
 
-id_num = '390099'
-password_num = 'Geonwoo384973'
+passwordFile = open("id_password.txt", "r")
+passwordFileContents = passwordFile.readlines()
+id_num = passwordFileContents[1]
+password_num = passwordFileContents[2]
+passwordFile.close()
+
 
 browser = webdriver.Chrome(options=chrome_options)
 browser.get("https://parentvue.cusdk8.org/PXP2_Login_Student.aspx?regenerateSessionId=True")
@@ -66,5 +70,6 @@ for i in range(len(templist)) :
 
 
 browser.close()
-end = time.time()
-print("Time Elapsed :", end-start)
+
+endTime = time.time()
+print("Time Elapsed :", endTime-startTime, "seconds")
