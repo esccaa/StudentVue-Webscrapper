@@ -7,11 +7,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-
 def delete_last_element(string1) :
 	return string1[:-1]
-
-
 
 startTime = time.time()
 
@@ -35,8 +32,6 @@ id_num = delete_last_element(str(id_password_file.readline()))
 password_num = delete_last_element(str(id_password_file.readline()))
 id_password_file.close()
 
-
-
 browser = webdriver.Chrome(options=chrome_options)
 browser.get("https://parentvue.cusdk8.org/PXP2_Login_Student.aspx?regenerateSessionId=True")
 id_search_box = browser.find_element("id", "ctl00_MainContent_username")
@@ -45,8 +40,6 @@ login_click = browser.find_element("id", "ctl00_MainContent_Submit1")
 id_search_box.send_keys(id_num)
 password_search_box.send_keys(password_num)
 login_click.click()
-
-
 
 
 #  Gradebook Data
@@ -64,13 +57,12 @@ templist = gradeBookSoup.find_all("span", attrs={"class":"score"})
 for i in range(classNum) :
 	classOverallGrades.append(templist[i].get_text())
 
-
-
 for i in range(classNum) :
 	print(courseTitles[i], ":", classOverallGrades[i], "percent")
 browser.close()
 
 endTime = time.time()
+
 print("\n")
 print("Time Elapsed :", endTime-startTime, "seconds")
 
