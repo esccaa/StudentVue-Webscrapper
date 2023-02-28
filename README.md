@@ -13,3 +13,17 @@ Your_ID
 Your_StudentView_Password
 ```
 Your Student ID and Password will only be stored in your computer.
+
+
+
+## Run the Program
+
+To run the program, you need to have python installed (version 3.0 and up). Type in the terminal :
+```
+python3 SW.py
+```
+or
+```
+python SW.py
+```
+to run the program

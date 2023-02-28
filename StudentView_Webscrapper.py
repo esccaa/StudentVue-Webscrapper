@@ -68,15 +68,13 @@ for i in range(classNum) :
 
 for i in range(classNum) :
 	print(courseTitles[i], ":", classOverallGrades[i], "percent")
-
-
-
-
-
-
-
 browser.close()
 
 endTime = time.time()
 print("\n")
 print("Time Elapsed :", endTime-startTime, "seconds")
+
+
+
+
+
