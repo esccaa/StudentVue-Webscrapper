@@ -29,6 +29,14 @@ Google Chrome downloaded on your computer is required for this application to ru
 You first need to check your Chrome version. To check your version, you can go to chrome://version/. The first line will contain the version of your Chrome browser.
 Go to https://chromedriver.chromium.org/downloads, and download the correct ChromeDriver version. You should unzip the file, and move it to the same folder this application would be inside.
 
+#### Downloading requirements.txt
+
+Inside of the terminal, go into the StudentView Directory and type:
+```
+pip install -r requirements.txt
+```
+to download all necessary Python Libaraies inside of this project.
+
 
 
 ## Run the Program
