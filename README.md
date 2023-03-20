@@ -46,3 +46,8 @@ To run the program, you need to have python installed (version 3.0 and up). Type
 grades.sh
 ```
 to run the program.
+If you don't have permission access for the command, run :
+```
+chmod +x grades.sh
+```
+to give permission to run the command.
