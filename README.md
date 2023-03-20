@@ -43,7 +43,7 @@ to download all necessary Python Libaraies inside of this project.
 
 To run the program, you need to have python installed (version 3.0 and up). Type in the terminal :
 ```
-grades.sh
+./grades.sh
 ```
 to run the program.
 If you don't have permission access for the command, run :
