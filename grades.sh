@@ -1,0 +1,1 @@
+python3 studentview-scrapper.py

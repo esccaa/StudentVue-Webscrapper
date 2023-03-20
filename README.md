@@ -43,10 +43,6 @@ to download all necessary Python Libaraies inside of this project.
 
 To run the program, you need to have python installed (version 3.0 and up). Type in the terminal :
 ```
-python3 SW.py
+grades.sh
 ```
-or
-```
-python SW.py
-```
-to run the program
+to run the program.
