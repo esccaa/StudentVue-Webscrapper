@@ -50,4 +50,6 @@ If you don't have permission access for the command, run :
 ```
 chmod +x grades.sh
 ```
-to give permission to run the command.
+to give yourself permission to run the command.
+
+If that doesn't work, do the previous steps, but with "grades.sh" changed to "grades2.sh".
