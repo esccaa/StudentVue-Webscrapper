@@ -1,1 +1,1 @@
-python3 studentvue-scrapper.py
+python studentvue-scrapper.py
