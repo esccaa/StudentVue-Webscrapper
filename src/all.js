@@ -13,10 +13,14 @@ function gotLoginInfo(districtURL, id, password) {
     .then(grades => {
       const gradesRaw = grades;
       const parsedGrades = JSON.parse(gradesRaw);
-      function gotParsed(parsedGrades);
+      gotParsed(parsedGrades)
     });
 }
 
 function gotParsed(gradeJSON) {
-    
+    const course = gradeJSON.Gradebook.Courses.Course;
+    numClasses = course.length;
+    for (let i=0; i<numClasses; i++) {
+        console.log(course[i].Title+": "+course[i].Marks.Mark.CalculatedScoreRaw+" ("+course[i].Marks.Mark.CalculatedScoreString+")");
+    }
 }
