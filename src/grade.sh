@@ -24,13 +24,18 @@ function specific(){
         node specific.js 
 }
 
-case $1 in 
-    -h|--help)
-        show_commands
-        ;;
-    -a|--all)
+if [ $# -eq 0 ]
+    then 
         all
-        ;;
-    -s|--specific)
-        specific
-esac
+else
+    case $1 in 
+        -h|--help)
+            show_commands
+            ;;
+        -a|--all)
+            all
+            ;;
+        -s|--specific)
+            specific
+    esac
+fi
