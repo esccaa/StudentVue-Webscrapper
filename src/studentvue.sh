@@ -6,6 +6,7 @@ function show_commands(){
     echo "LIST OF COMMANDS"
     echo "-a or --all: Viewing all grades"
     echo "-s or --specific (followed by the class period): Viewing specific grades for one class"
+    echo "-zp or --zeroperiod (followed by true or false): Setting Zero-Period to True or False"
     echo "-h or --help: Viewing all commands"
 }
 
@@ -50,6 +51,17 @@ function viewclasses(){
     fi 
 }
 
+function zeroperiod(){
+    if [ $# -eq 2 ]; then
+        zpBool=$2
+        if [[ $zpBool == 'false' || $zpBool == 'False' ]]; then
+            echo '1' > zero-period.txt
+        elif [[ $zpBool == 'true' || $zpBool == 'True' ]]; then
+            echo '0' > zero-period.txt
+        fi
+    fi
+}
+
 
 if [ $# -eq 0 ]
     then 
@@ -67,6 +79,9 @@ else
             ;;
         -vc|--viewclasses)
             viewclasses
+            ;;
+        -zp|--zeroperiod)
+            zeroperiod $@
             ;;
         *)
             echo "Error: Invalid command"
