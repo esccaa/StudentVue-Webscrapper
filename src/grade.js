@@ -31,7 +31,7 @@ function readCommunication() {
   }
 }
 
-fs.readFile(__dirname + '/id_password.txt', 'utf8', (err, inputD) => {
+fs.readFile(__dirname + '../id_password.txt', 'utf8', (err, inputD) => {
   if (err) throw err;
   const separated = inputD.toString().split(' ');
   gotLoginInfo(separated[0], separated[1], separated[2]);
