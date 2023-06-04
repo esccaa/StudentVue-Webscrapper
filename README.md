@@ -20,3 +20,17 @@ chmod u+x src/grade.sh
 ```
 
 To use the command globally, move the grade.sh file to your PASS directory (where all of your commands are stored).
+
+## Using the tool
+
+You can use:
+```
+./grades.sh [command]
+```
+to get the desired output.
+
+You can do:
+``` 
+./grades.sh -h
+```
+to view all of the commands or go [here](./Commands.md) to view the list of possible commands.
